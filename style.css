@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
+    
 }
 :root{
     --Softred: hsl(7, 99%, 70%);
@@ -16,9 +16,91 @@
     
 }
 
-.body{
-    /* background-color: var(--White); */
-    background-color: aqua;
-    min-height: 100vh;
+body{
+   min-height: 100vh;
+   
+   background-color: aqua;
+} 
+
+.logo-img img{
+    width: 30px;
+    position: absolute;
+}
+.img-container{
+    background-image: url(./images/desktop/image-header.jpg);
+    height: 70%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
+.inner-container{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: var(--White);
+    height: auto;
+    margin-top: 200px;
+}
+
+.box img{
+    width: 100%;
+}
+
+
+
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "one two"
+    "three four"
+    "five six";
+}
+
+.box1{
+    grid-area: two;
+}
+
+.box2{
+    grid-area: one;
+}
+
+.box3{
+    grid-area: three;
+}
+
+.box4{
+    grid-area: four;
+}
+
+.box5{
+    grid-area: five;
+}
+
+.box6{
+    grid-area: six;
+}
+
+
+
+.testimonial-flex{
+    display: flex;
+}
+
+
+
+
+.galery-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+}
+
+
+footer{
+    background-color: var(--Darkmoderatecyanfooter);
+    width: 100%;
+} 

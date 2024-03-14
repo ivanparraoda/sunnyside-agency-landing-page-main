@@ -19,6 +19,7 @@
   --Verydarkgrayishblue: hsl(213, 9%, 39%);
   --Darkgrayishblue: hsl(232, 10%, 55%);
   --Grayishblue: hsl(210, 4%, 67%);
+  --Grayishbluesoft: hsla(207, 60%, 88%, 0.548);
   --White: hsl(0, 0%, 100%);
 }
 
@@ -154,6 +155,7 @@ nav.nav-bar .nav-links .links:last-child button {
   bottom: 0;
   right: 30%;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .btn-accent1::after {
@@ -168,6 +170,10 @@ nav.nav-bar .nav-links .links:last-child button {
   z-index: -1;
 }
 
+.btn-accent1:hover::after {
+  background-color: var(--Yellow);
+}
+
 .btn-accent2::after {
   content: ''; /* Contenido vacío para el ::after */
   position: absolute; /* Establecer la posición absoluta para que la línea se coloque en relación al botón */
@@ -180,6 +186,9 @@ nav.nav-bar .nav-links .links:last-child button {
   z-index: -2;
 }
 
+.btn-accent2:hover::after {
+  background-color: var(--Softred);
+}
 .text-item {
   position: absolute;
   display: flex;
@@ -214,6 +223,7 @@ nav.nav-bar .nav-links .links:last-child button {
   width: 90%;
   text-align: center;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .person-testimonial img {
@@ -274,6 +284,21 @@ li a {
   justify-content: space-between;
 }
 
+.footer-nav li a:hover {
+  color: var(--White);
+}
+
+.social-icons {
+  cursor: pointer;
+}
+
+#icon {
+  transition: fill 0.3s ease; /* Transición suave */
+}
+
+.icon:hover {
+  fill: rgb(44, 36, 36); /* Cambia el color del SVG al hacer hover */
+}
 @media (min-width: 650px) {
   .flex-gallery {
     display: grid;
@@ -296,6 +321,11 @@ li a {
   }
   nav.nav-bar .nav-links .links:last-child button {
     background-color: var(--White);
+  }
+
+  nav.nav-bar .nav-links .links:last-child button:hover {
+    background-color: var(--Grayishbluesoft);
+    color: var(--White);
   }
 
   .nav-links::before {
